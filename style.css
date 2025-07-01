@@ -89,6 +89,23 @@ select:hover, select:focus {
   object-fit: cover;
 }
 
+.gallery-image {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 2px solid #1976d2;
+  cursor: pointer;
+}
+
+.gallery-image:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
+  border-color: #64b5f6;
+}
+
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -102,6 +119,11 @@ select:hover, select:focus {
 
 @media (max-width: 768px) {
   .gallery-item {
+    width: 250px;
+    height: 250px;
+  }
+  
+  .gallery-image {
     width: 250px;
     height: 250px;
   }
